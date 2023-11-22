@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
     public TMP_Text winText;
     public Interaction player;
     private static UIManager _instance;
-    [SerializeField] private string NewGameLevel = "NewGame";
+   
     public static UIManager Instance
     {
         get
@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-       if (Interaction.Instance.cheese >= 9)
+       if (Interaction.Instance.cheese >= 10)
     {
             winText.enabled = true;
         }
@@ -52,7 +52,7 @@ public class UIManager : MonoBehaviour
     }
     public void NewGameButton()
     {
-        SceneManager.LoadScene(NewGameLevel);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
    
 }

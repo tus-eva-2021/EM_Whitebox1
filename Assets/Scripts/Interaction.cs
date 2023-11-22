@@ -55,7 +55,6 @@ public class Interaction : MonoBehaviour
     {
         if (Interaction.Instance.digs >= 1)
         {
-           
             digs --;
         }
        
