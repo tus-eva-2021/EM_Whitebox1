@@ -15,13 +15,15 @@ public class DigAction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (UnityEngine.Input.GetButton("Dig") /*&& GetComponent<BoxCollider>()*/)
+        
+    }
+    private void OnCollisionStay(Collision collision)
+    {
+        if (UnityEngine.Input.GetButton("Dig") && Input.GetButton("Dig"))
         {
             dig.Break();
-            Destroy(this);
-          //  Destroy(GetComponent<BoxCollider>());
+            Destroy(gameObject);
 
         }
     }
-  
 }

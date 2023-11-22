@@ -53,12 +53,10 @@ public class Interaction : MonoBehaviour
    
             public void Break()
     {
-        if (Interaction.Instance.digs >= 1 && Input.GetButton("Dig"))
+        if (Interaction.Instance.digs >= 1)
         {
-            Debug.Log("working");
-            digs --;
            
-
+            digs --;
         }
        
     }
