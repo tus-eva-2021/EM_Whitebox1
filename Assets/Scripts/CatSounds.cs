@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class CatSounds : MonoBehaviour
 {
-    private AudioSource catSoundPlayer;
+    public AudioSource catSoundPlayer;
     public AudioClip[] clips;
+    [Range(0.1f, 0.5f)]
+    public float randomVolume = 0.2f;
+    public float randomPitch = 0.2f;
    /* public int randomIndex;
     public AudioClip randomClip;*/
     // Start is called before the first frame update
@@ -20,16 +24,15 @@ public class CatSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
     }
-    private void OnTriggerStay(Collider other)
+    public void randomNoises()
     {
-        if (other.tag == "Player")
-        {
-          catSoundPlayer.clip  = clips[Random.Range(0, clips.Length)];
-            //  catSoundPlayer.clip = randomClip;
-            catSoundPlayer.PlayOneShot(catSoundPlayer.clip);
+        catSoundPlayer.clip = clips[Random.Range(0, clips.Length)];
+        catSoundPlayer.volume = Random.Range(1 - randomVolume, 1);
+        catSoundPlayer.pitch = Random.Range(1 - randomPitch, 1 + randomPitch);
+        //  catSoundPlayer.clip = randomClip;
+        catSoundPlayer.PlayOneShot(catSoundPlayer.clip);
 
-        }
     }
 }
