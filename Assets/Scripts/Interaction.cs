@@ -47,15 +47,15 @@ public class Interaction : MonoBehaviour
     }
     public void AddCheese()
     {
-        cheese++;
-        digs++;
+        cheese += 1;
+        digs += 1;
     }
    
             public void Break()
     {
         if (Interaction.Instance.digs >= 1)
         {
-            digs --;
+            digs -= 1;
         }
        
     }

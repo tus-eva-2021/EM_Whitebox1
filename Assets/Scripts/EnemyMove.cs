@@ -10,7 +10,7 @@ public class EnemyMove : MonoBehaviour
 {
     public Transform goal;
     public NavMeshAgent catSpeed;
-    float speed = 2f;
+    float speed = 2.5f;
     float catIncrease = 0.5f;
     public GameObject Rat;
     public TMP_Text LoseText;
