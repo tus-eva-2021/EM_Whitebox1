@@ -24,15 +24,16 @@ public class CatSounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+      
     }
     public void randomNoises()
     {
         catSoundPlayer.clip = clips[Random.Range(0, clips.Length)];
         catSoundPlayer.volume = Random.Range(1 - randomVolume, 1);
         catSoundPlayer.pitch = Random.Range(1 - randomPitch, 1 + randomPitch);
-        //  catSoundPlayer.clip = randomClip;
         catSoundPlayer.PlayOneShot(catSoundPlayer.clip);
+        //  catSoundPlayer.clip = randomClip;
+
 
     }
 }
