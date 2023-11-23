@@ -11,15 +11,11 @@ public class CatSounds : MonoBehaviour
     public float randomVolume = 0.2f;
     [Range(0.1f, 0.5f)]
     public float randomPitch = 0.2f;
-   /* public int randomIndex;
-    public AudioClip randomClip;*/
-    // Start is called before the first frame update
+
     void Start()
     {
       catSoundPlayer = GetComponent<AudioSource>();
-      //  randomClip = GetComponent<AudioClip>();
-       // randomIndex = Random.Range(0, clips.Length);
-      //  randomClip = clips[randomIndex];
+      
     }
 
     // Update is called once per frame
@@ -33,7 +29,6 @@ public class CatSounds : MonoBehaviour
         catSoundPlayer.volume = Random.Range(1 - randomVolume, 1);
         catSoundPlayer.pitch = Random.Range(1 - randomPitch, 1 + randomPitch);
         catSoundPlayer.PlayOneShot(randomClip);
-        //  catSoundPlayer.clip = randomClip;
 
 
     }
