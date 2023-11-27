@@ -52,12 +52,8 @@ public class Interaction : MonoBehaviour
     }
    
             public void Break()
-    {
-        if (Interaction.Instance.digs >= 1)
-        {
-            digs -= 1;
-        }
-       
+    { if (Interaction.Instance.digs >= 1)
+      digs -= 1;
     }
    
 }

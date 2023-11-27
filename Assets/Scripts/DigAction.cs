@@ -19,7 +19,7 @@ public class DigAction : MonoBehaviour
     }
     private void OnCollisionStay(Collision collision)
     {
-        if (UnityEngine.Input.GetButton("Dig") && Input.GetButton("Dig"))
+        if (UnityEngine.Input.GetButton("Dig") && Interaction.Instance.digs >= 1)
         {
             dig.Break();
             Destroy(gameObject);
